@@ -4,14 +4,20 @@ const express = require('express');
 const router = express.Router();
 // importiamo i controllers
 const controllers = require('../controllers/postsControllers')
-const { index, destroy } = controllers
+const { index, show, store, update, destroy } = controllers
 
 // ROTTE CRUD
+// index
 router.get('/', index);
-router.get('/:id', (req, res) => { res.json('questa è la rotta show cazzo') });
-router.post('/', (req, res) => { res.json('questa è la rotta store zonna') });
-router.put('/:id', (req, res) => { res.json('questa è la rotta update strunz') })
+// show
+router.get('/:id', show);
+// store
+router.post('/', store);
+// update
+router.put('/:id', update)
+// modify
 router.patch('/:id', (req, res) => { res.json('questa è la rotta modify cugghiuni') })
+// destroy
 router.delete('/:id', destroy);
 
 // ESPORTIAMO I MODULI DEI ROUTER
