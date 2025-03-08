@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Giunta-Giovanni/ripasso_Express_sql#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mysql2": "^3.13.0"
   }
 }
