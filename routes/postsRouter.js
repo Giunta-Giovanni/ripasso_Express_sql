@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 // importiamo i controllers
 const controllers = require('../controllers/postsControllers')
-const { index, show, store, update, destroy } = controllers
+const { index, show, store, update, modify, destroy } = controllers
 
 // ROTTE CRUD
 // index
@@ -16,7 +16,7 @@ router.post('/', store);
 // update
 router.put('/:id', update)
 // modify
-router.patch('/:id', (req, res) => { res.json('questa è la rotta modify cugghiuni') })
+router.patch('/:id', modify)
 // destroy
 router.delete('/:id', destroy);
 
